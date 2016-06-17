@@ -1,0 +1,6 @@
+#! /bin/bash
+
+# -v $(pwd)/ep_oauth2:/etherpad-lite/node_modules/ep_oauth2/ \
+docker run --rm -it --name etherpad-lite-hbp \
+  -p 9001:9001 \
+  etherpad-lite-hbp
