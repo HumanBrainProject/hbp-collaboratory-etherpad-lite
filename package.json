@@ -1,0 +1,9 @@
+{
+  "name": "ehterpad-lite-hbp",
+  "description": "hold the list of external depenedncies for the HBP Collaboratory flavored Etherpad lite",
+  "private": true,
+  "dependencies": {
+    "ep_hbp_collaboratory_auth": "^0.1.2",
+    "ep_oauth2": "^0.1.2"
+  }
+}
