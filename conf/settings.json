@@ -136,6 +136,10 @@
   },
   */
 
+  "users": {
+    "oauth2": { /* all variables are defined as ENV */ }
+  },
+
   // restrict socket.io transport methods
   "socketTransportProtocols" : ["xhr-polling", "jsonp-polling", "htmlfile"],
 

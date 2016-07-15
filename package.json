@@ -3,7 +3,7 @@
   "description": "hold the list of external depenedncies for the HBP Collaboratory flavored Etherpad lite",
   "private": true,
   "dependencies": {
-    "ep_hbp_collaboratory": "^0.2.0",
+    "ep_hbp_collaboratory": "^0.3.0",
     "ep_oauth2": "^0.1.3"
   }
 }
