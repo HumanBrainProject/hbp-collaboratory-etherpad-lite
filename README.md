@@ -9,7 +9,7 @@ with plugins for the HBP Collaboratory.
 Build the image using Docker `docker` command.
 
 ```bash
-docker build . --tag etherpad-lite-hbp
+docker build . --tag bbpsrvi16.epfl.ch:5000/etherpad-lite-hbp:latest
 ```
 
 
@@ -57,7 +57,7 @@ Uncomment it and replace the value given your environement.
 This command will run the container locally.
 
 ```bash
-docker run --rm -it --name etherpad -p 9001:9001 -v $(pwd)/conf:/conf etherpad-lite-hbp
+docker run --rm -it --name etherpad -p 9001:9001 -v $(pwd)/conf:/conf bbpsrvi16.epfl.ch:5000/etherpad-lite-hbp:latest
 
 # -rm remove the container on stop
 # -it interactive mode
@@ -78,7 +78,5 @@ ssh://bbpsrvi16.epfl.ch:/root/docker-registry-conf/certs
 To release, run:
 
 ```bash
-docker build
-docker tag --tag bbpsrvi16.epfl.ch:5000/etherpad-lite-hbp:latest
 docker push bbpsrvi16.epfl.ch:5000/etherpad-lite-hbp:latest
 ```
