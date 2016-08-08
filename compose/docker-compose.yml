@@ -1,0 +1,22 @@
+version: '2'
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    container_name: nginx-proxy
+    environment:
+      - DEFAULT_HOST=local.humanbrainproject.eu
+    ports:
+      - "9001:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./nginx-conf-d:/etc/nginx/vhost.d:ro
+  local.humanbrainproject.eu:
+    image: bbpsrvi16.epfl.ch:5000/etherpad-lite-hbp:latest
+    container_name: etherpad-lite
+    environment:
+      - VIRTUAL_HOST=local.humanbrainproject.eu
+      - VIRTUAL_PORT=8080
+    ports:
+      - "8080:9001"
+    volumes:
+      - ./conf:/conf

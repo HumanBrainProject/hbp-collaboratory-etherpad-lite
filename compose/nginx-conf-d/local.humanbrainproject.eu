@@ -1,0 +1,4 @@
+location ~* ^/etherpad/ {
+  rewrite ^/etherpad/(.*) /$1 break;
+  proxy_pass http://etherpad-lite:9001;
+}
