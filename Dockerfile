@@ -28,4 +28,4 @@ RUN bin/installDeps.sh
 VOLUME /conf
 EXPOSE 9001
 
-CMD ["bin/run.sh", "--settings", "/conf/settings.json", "--root"]
+CMD ["node", "node_modules/ep_etherpad-lite/node/server.js", "--settings", "/conf/settings.json"]
