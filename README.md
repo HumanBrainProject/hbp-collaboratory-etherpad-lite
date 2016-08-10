@@ -66,17 +66,6 @@ docker run --rm -it --name etherpad -p 9001:9001 -v $(pwd)/conf:/conf bbpsrvi16.
 You can know connect to the port `9001` of your docker host.
 
 
-# Push to release
+# Deployment within HBP
 
-You can push the generated image to bbpsrvi16.epfl.ch:5000. You must be part
-of the EPFL network to do so and add bbpsrvi16.epfl.ch:5000 in the list
-of --insecure-host as it use a self signed certificate.
-
-You can dowload the certificate from
-ssh://bbpsrvi16.epfl.ch:/root/docker-registry-conf/certs
-
-To release, run:
-
-```bash
-docker push bbpsrvi16.epfl.ch:5000/etherpad-lite-hbp:latest
-```
+See the DEPLOY.MD to learn more about the deployment within our infrastructure.
