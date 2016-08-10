@@ -205,9 +205,10 @@ to handle the rewrites. They have been done in a Nginx vhost.d config file.
 ```nginx
 location ~* ^/etherpad/ {
   rewrite ^/etherpad/(.*) /$1 break;
-  proxy_set_header Host $host;
+  proxy_set_header Host              $host;
+  proxy_set_header X-Forwarded-Proto $scheme;
+  proxy_redirect   /                 https://$host/etherpad/;
   proxy_pass http://etherpad-lite-server:9001;
-  proxy_redirect    /                        /etherpad/;
 }
 ```
 
