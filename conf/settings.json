@@ -62,7 +62,7 @@
   "padOptions": {
     "noColors": false,
     "showControls": true,
-    "showChat": true,
+    "showChat": false,
     "showLineNumbers": true,
     "useMonospaceFont": false,
     "userName": false,
@@ -137,7 +137,17 @@
   */
 
   "users": {
-    "oauth2": { /* all variables are defined as ENV */ }
+    "oauth2": {
+      "authorizationURL": "https://services.humanbrainproject.eu/oidc/authorize",
+      "tokenURL": "https://services.humanbrainproject.eu/oidc/token",
+      "userinfoURL": "https://services.humanbrainproject.eu/oidc/userinfo",
+      "usernameKey": "name",
+      "useridKey": "preferred_username",
+
+      "clientID": "CLIENT_ID",
+      "clientSecret": "CLIENT_SECRET",
+      "publicURL": "https://developer.humanbrainproject.eu/etherpad"
+    }
   },
 
   // restrict socket.io transport methods
