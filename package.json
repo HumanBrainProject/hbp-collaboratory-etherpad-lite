@@ -4,6 +4,6 @@
   "private": true,
   "dependencies": {
     "ep_hbp_collaboratory": "^0.3.0",
-    "ep_oauth2": "^0.1.3",
+    "ep_oauth2": "^0.1.3"
   }
 }
